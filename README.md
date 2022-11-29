@@ -8,19 +8,16 @@ Before implementation, refer to the ‘Useful GIT Videos’ section.
 ###  Phase I
 ---
 * Use n-tier software architecture model.
-* You are not allowed to use DTOs in this phase.
 * Make a domain model `Course` with  `id, name, code`.
 * Make a domain model `Student` with `id, firstName, lastName, email, major, and coursesTaken`.
     * A student can take multiple courses.
 * Create repositories for the domain models. 
 	* Hold data in array lists.
 * Implement CRUD operations for the domains.
-* Make another version of your API (v2) using `URL Versioning` to implement followings:
-	* Add `gpa` attribute to `Student` model.
-	* Implement `getStudentsByMajor(String major)` method.
-		* Returns all students majoring `major`.
-	* Implement `getCoursesByStudentId(int studentId)` method.
-		* Returns all courses of the student.
+* Implement `getStudentsByMajor(String major)` method.
+	* Returns all students majoring `major`.
+* Implement `getCoursesByStudentId(int studentId)` method.
+* Returns all courses of the student.
 
 
 ---
