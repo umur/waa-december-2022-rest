@@ -34,8 +34,7 @@ Before implementation, refer to the ‘Useful GIT Videos’ section.
 ## Submission
 
 * For each phase (except for Phase IV), create a postman collection that includes sample requests for all of your endpoints.
-* Fork the following repository and push your changes.
-	* [https://github.com/umur/waa-may-2022-restful.git](https://github.com/umur/waa-may-2022-restful.git)
+* Fork the repository and push your changes.
 * Once you finished your project, send a Pull Request. (Send only one Pull Request once you finish the assignment.)
 
 ### Important Notes
