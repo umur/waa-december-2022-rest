@@ -14,10 +14,13 @@ public class StudentRepo {
 
     static {
         students.add(new Student(1, "Prabesh", "KC",
-                "prabesh@email.com", "Computer Science",
+                "prabesh@email.com", "CS",
                 new ArrayList<Course>()));
         students.add(new Student(2, "Karna", "Shrestha",
-                "karna@email.com", "Computer Science",
+                "karna@email.com", "cs",
+                new ArrayList<Course>()));
+        students.add(new Student(2, "John", "Digger",
+                "digger@email.com", "MBA",
                 new ArrayList<Course>()));
     }
 
@@ -65,5 +68,12 @@ public class StudentRepo {
                     }
                     s.getCoursesTaken().add(course);
                 });
+    }
+
+    public List<Student> getStudentsByMajor(String major) {
+        return students.stream()
+                .filter(s -> s.getMajor()
+                        .equalsIgnoreCase(major))
+                .toList();
     }
 }
