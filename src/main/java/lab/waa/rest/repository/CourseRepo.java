@@ -15,6 +15,8 @@ public class CourseRepo {
         courses.add(new Course(2, "WAA", "CS545"));
         courses.add(new Course(3, "MWA", "CS572"));
         courses.add(new Course(4, "WAP", "CS472"));
+        courses.add(new Course(5, "ALGO", "CS477"));
+        courses.add(new Course(6, "EA", "CS506"));
     }
 
 

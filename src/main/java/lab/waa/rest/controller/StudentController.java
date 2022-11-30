@@ -53,4 +53,9 @@ public class StudentController {
     public List<Student> getStudentsByMajor(@PathVariable String major){
         return studentService.getStudentsByMajor(major);
     }
+
+    @GetMapping("/coursebystudent/{studentId}")
+    public List<Course> getCou(@PathVariable int studentId){
+        return studentService.getCoursesByStudentId(studentId);
+    }
 }

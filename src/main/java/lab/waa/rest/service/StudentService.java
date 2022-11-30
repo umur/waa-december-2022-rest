@@ -14,4 +14,5 @@ public interface StudentService {
     void save (Student student);
     void addCourseTaken(int studentId, Course course);
     List<Student> getStudentsByMajor(String major);
+    List<Course> getCoursesByStudentId(int studentId);
 }

@@ -49,4 +49,9 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getStudentsByMajor(String major) {
         return studentRepo.getStudentsByMajor(major);
     }
+
+    @Override
+    public List<Course> getCoursesByStudentId(int studentId){
+        return studentRepo.getCoursesByStudentId(studentId);
+    }
 }

@@ -2,6 +2,7 @@ package lab.waa.rest.repository;
 
 import lab.waa.rest.entity.Course;
 import lab.waa.rest.entity.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,18 +11,38 @@ import java.util.List;
 @Repository
 public class StudentRepo {
 
+    ;
     static List<Student> students = new ArrayList<>();
 
     static {
+        var courseRepo = new CourseRepo();
         students.add(new Student(1, "Prabesh", "KC",
                 "prabesh@email.com", "CS",
-                new ArrayList<Course>()));
+                new ArrayList<Course>(
+                        List.of(
+                                courseRepo.getById(1),
+                                courseRepo.getById(2),
+                                courseRepo.getById(5)
+                        )
+                )));
         students.add(new Student(2, "Karna", "Shrestha",
                 "karna@email.com", "cs",
-                new ArrayList<Course>()));
-        students.add(new Student(2, "John", "Digger",
+                new ArrayList<Course>(
+                        List.of(
+                                courseRepo.getById(2),
+                                courseRepo.getById(3),
+                                courseRepo.getById(6)
+                        )
+                )));
+        students.add(new Student(3, "John", "Digger",
                 "digger@email.com", "MBA",
-                new ArrayList<Course>()));
+                new ArrayList<Course>(
+                        List.of(
+                                courseRepo.getById(3),
+                                courseRepo.getById(4),
+                                courseRepo.getById(5)
+                        )
+                )));
     }
 
     public List<Student> getStudents(int offset, int count) {
@@ -75,5 +96,9 @@ public class StudentRepo {
                 .filter(s -> s.getMajor()
                         .equalsIgnoreCase(major))
                 .toList();
+    }
+
+    public List<Course> getCoursesByStudentId(int studentId){
+        return getById(studentId).getCoursesTaken();
     }
 }
