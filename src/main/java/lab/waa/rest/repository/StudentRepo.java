@@ -2,10 +2,12 @@ package lab.waa.rest.repository;
 
 import lab.waa.rest.entity.Course;
 import lab.waa.rest.entity.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class StudentRepo {
 
     static List<Student> students = new ArrayList<>();
@@ -20,6 +22,8 @@ public class StudentRepo {
     }
 
     public List<Student> getStudents(int offset, int count) {
+        if (count == 0)
+            count = 5;
         return students.stream()
                 .skip(offset)
                 .limit(count).toList();

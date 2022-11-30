@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @RequestMapping("/students")
+@RestController
 public class StudentController {
 
     @Autowired
@@ -40,7 +40,7 @@ public class StudentController {
         studentService.deleteById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("addCourseTaken/{id}")
     public void addCourseTaken(@PathVariable int id, @RequestBody Course course){
         studentService.addCourseTaken(id, course);
     }
