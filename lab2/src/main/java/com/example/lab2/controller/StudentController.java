@@ -18,16 +18,17 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    @CrossOrigin
     @GetMapping
     public List<StudentBasicDto> getAllStudent(){
         return studentService.getAllStudent();
     }
-
+    @CrossOrigin
     @GetMapping("/{id}/courses")
     public  List<Course> getCourseByStudentId(@PathVariable int id) {
         return studentService.getCourseByStudentId(id);
     }
-
+    @CrossOrigin
     @GetMapping("/filterByMajor")
     public List<Student> getStudentsByMajor(@RequestParam("major") String major) {
         System.out.println("hello from controller 3");
@@ -41,20 +42,24 @@ public class StudentController {
 //        System.out.println("=====" + major);
 //        return studentService.getStudentsByMajor(major);
 //    }
+    @CrossOrigin
     @GetMapping("/{id}")
     public StudentBasicDto getStudentById(@PathVariable int id){
         return studentService.getStudentById(id);
     }
 
+    @CrossOrigin
     @PostMapping
     public void create(@RequestBody Student student){
         studentService.save(student);
     }
 
+    @CrossOrigin
     @PutMapping("/{id}")
     public void update(@PathVariable int id, @RequestBody StudentBasicDto student){
         studentService.updateStudent(id,student);
     }
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public String delete(@PathVariable int id){
        return studentService.deleteStudentById(id);
