@@ -1,5 +1,6 @@
 package com.ujjwal.restassignment.repository;
 
+import com.ujjwal.restassignment.dto.CourseDto;
 import com.ujjwal.restassignment.entity.Course;
 import org.springframework.stereotype.Repository;
 

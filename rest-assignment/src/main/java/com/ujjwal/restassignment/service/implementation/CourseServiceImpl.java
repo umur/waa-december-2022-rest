@@ -1,9 +1,11 @@
 package com.ujjwal.restassignment.service.implementation;
 
+import com.ujjwal.restassignment.dto.CourseDto;
 import com.ujjwal.restassignment.entity.Course;
 import com.ujjwal.restassignment.repository.CourseRepository;
 import com.ujjwal.restassignment.service.CourseService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,14 +14,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CourseServiceImpl implements CourseService {
     private final CourseRepository courseRepository;
+    private final ModelMapper modelMapper;
     @Override
-    public void save(Course course) {
+    public void save(CourseDto courseDto) {
+        Course course = modelMapper.map(courseDto, Course.class);
         courseRepository.save(course);
     }
 
     @Override
-    public Course update(int id, Course course) {
-        return courseRepository.update(id, course);
+    public CourseDto update(int id, CourseDto courseDto) {
+        Course course = modelMapper.map(courseDto, Course.class);
+        Course result = courseRepository.update(id,course);
+        return modelMapper.map(result, CourseDto.class);
     }
 
     @Override
@@ -28,12 +34,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Course getById(int id) {
-        return courseRepository.getById(id);
+    public CourseDto getById(int id) {
+        Course result = courseRepository.getById(id);
+        return modelMapper.map(result,CourseDto.class);
     }
 
     @Override
-    public List<Course> getAll() {
-        return courseRepository.getAll();
+    public List<CourseDto> getAll() {
+        return courseRepository.getAll().stream().map(course -> modelMapper.map(course,CourseDto.class)).toList();
     }
 }

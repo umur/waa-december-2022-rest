@@ -1,6 +1,6 @@
 package com.ujjwal.restassignment.controller;
 
-import com.ujjwal.restassignment.entity.Course;
+import com.ujjwal.restassignment.dto.CourseDto;
 import com.ujjwal.restassignment.service.CourseService;
 import com.ujjwal.restassignment.service.implementation.CourseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +19,22 @@ public class CourseController {
     }
 
     @GetMapping
-    public List<Course> getCourses(){
+    public List<CourseDto> getCourses(){
         return courseService.getAll();
     }
 
     @GetMapping("/{id}")
-    public Course getById(@PathVariable int id){
+    public CourseDto getById(@PathVariable int id){
         return courseService.getById(id);
     }
 
     @PostMapping
-    public void add(@RequestBody Course course){
+    public void add(@RequestBody CourseDto course){
         courseService.save(course);
     }
 
     @PutMapping("/{id}")
-    public Course update(@PathVariable int id, @RequestBody Course course){
+    public CourseDto update(@PathVariable int id, @RequestBody CourseDto course){
         return courseService.update(id, course);
     }
 
