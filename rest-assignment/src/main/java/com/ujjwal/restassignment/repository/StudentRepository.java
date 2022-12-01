@@ -58,9 +58,9 @@ public class StudentRepository {
     }
     //    update a student
     public Student update(int id, Student student){
-        for (Student student1 : studentList){
-            if (student1.getId() == id){
-                studentList.set(id,student);
+        for (int i=0;i< studentList.size(); i++){
+            if (studentList.get(i).getId() == id){
+                studentList.set(i,student);
             }
         }
         return student;

@@ -38,9 +38,9 @@ public class CourseRepository {
     }
     //    update a course
     public Course update(int id, Course course){
-        for (Course course1 : courseList){
-            if (course1.getId() == id){
-                courseList.set(id,course);
+        for (int i=0;i<courseList.size();i++){
+            if (courseList.get(i).getId() == id){
+                courseList.set(i,course);
             }
         }
         return course;
