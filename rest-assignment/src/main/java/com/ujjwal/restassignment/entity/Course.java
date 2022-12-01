@@ -1,12 +1,15 @@
 package com.ujjwal.restassignment.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class Course {
     private int id;
     private String name;
-    private int code;
+    private String code;
 }
