@@ -14,7 +14,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"
         integrity="sha256-66f6uQTQkvHF8jpniLWJjnteEfmQaC/tATFew/nTBA8=" crossorigin="anonymous"></script>
-    <script src="./js/addbook.js" type="module"></script>
+    <script src="./js/addStudent.js" type="module"></script>
 </head>
 
 <body>
@@ -63,22 +63,28 @@
             </h6>
             <br>
 
-            <form id="bookForm" method="post">
+            <form id="studentForm" method="post">
                 <fieldset>
                     <legend></legend>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md">
                             <div class="form-group">
-                                <label for="title">*Student Name:</label>
-                                <input class="form-control" type="text" name="title" id="title" required autofocus>
+                                <label for="firstName">*Student First Name:</label>
+                                <input class="form-control" type="text" name="firstName" id="firstName" required autofocus>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="lastName">*Student Last Name:</label>
+                                <input class="form-control" type="text" name="lastName" id="lastName" required autofocus>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="isbn">*Email:</label>
-                                <input class="form-control" type="text" name="isbn" id="isbn" required>
+                                <label for="email">*Email:</label>
+                                <input class="form-control" type="email" name="email" id="email" required>
 
                             </div>
                         </div>

@@ -4,7 +4,7 @@
 
 "use strict";
 
-import { bookController } from "./studentController.js";
+import { studentController } from "./studentController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            const bookAdded = await bookController.saveBook(newBook);
-            console.log(bookAdded);
+            const studentAdded = await studentController.saveStudent(newStudent);
+            console.log(studentAdded);
         } catch (error) {
             console.error();
         }
 
-        document.location = "./book-list.html"
+        document.location = "./student-list.html"
 
     })
 

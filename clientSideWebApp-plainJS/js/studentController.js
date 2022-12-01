@@ -1,5 +1,5 @@
 /**
- * bookController.js
+ * studentController.js
  */
 
 "use strict";
@@ -23,20 +23,20 @@ const studentController = (function student() {
         }
 
     };
-
-    // const saveBook = async function (newbook) {
+//TODO
+    // const saveStudent = async function (newStudent) {
     //     try {
-    //         const response = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add",
+    //         const response = await fetch("https://",
     //             {
     //                 method: "POST", // or 'PUT'
     //                 headers: {
     //                     'Content-Type': 'application/json',
     //                 },
-    //                 body: JSON.stringify(newbook),
+    //                 body: JSON.stringify(newStudent),
     //             }
     //         );
-    //         const bookAdded = await response.json();
-    //         return bookAdded;
+    //         const studentAdded = await response.json();
+    //         return studentAdded;
     //     } catch (error) {
     //         console.error();
     //     }
@@ -45,7 +45,7 @@ const studentController = (function student() {
 
     return {
         getAllStudent: getAllStudent
-        // saveBook: saveBook
+        //saveStudent: saveStudent
     }
 
 })();
