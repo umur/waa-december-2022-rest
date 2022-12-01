@@ -31,6 +31,7 @@ public class CourseController {
 
     @PostMapping
     public void create(@RequestBody Course course){
+        System.out.println("post check");
         courseService.save(course);
     }
 
