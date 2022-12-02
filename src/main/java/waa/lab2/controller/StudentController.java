@@ -23,13 +23,13 @@ public class StudentController {
         return studentService.getAll();
     }
 
-    @GetMapping("/getCoursesByStudentId/{id}")
-    public List<Course> getCoursesByStudentId(@PathVariable int id) {
-        return studentService.getCoursesByStudentId(id);
+    @GetMapping("/getCoursesByStudentId")
+    public List<Course> getCoursesByStudentId(@RequestParam int studentId) {
+        return studentService.getCoursesByStudentId(studentId);
     }
 
-    @GetMapping("/getStudentsByMajor/{major}")
-    public List<Student> getStudentsByMajor(@PathVariable String major) {
+    @GetMapping("/getStudentsByMajor")
+    public List<Student> getStudentsByMajor(@RequestParam String major) {
         return studentService.getStudentsByMajor(major);
     }
 
