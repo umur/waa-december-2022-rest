@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Assignment</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <div>
+                <div style="width: 40%;float: left; margin-right: 20px;">
+                    <h1 id="formHeadCourse">Add a new Course</h1>
+                    <form id="courseSaveForm">
+                        <p>Id: <input id="id" type="number" min="1" class="form-control" required /></p>
+                        <p>Name: <input id="name" class="form-control" required /></p>
+                        <p>Code: <input id="code" class="form-control" required /></p>
+                        <button id="saveCourseBtn" class="btn btn-success">Save</button>
+                    </form>
+                </div>
+                <div style="width: 50%;float:left;">
+                    <h1>Course</h1>
+                    <table class="table table-bordered" id="courseTable">
+                    </table>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="width: 30%;float: left; margin-right: 20px;">
+                    <h1 id="formHeadStudent">Add a Student</h1>
+                    <form id="studentSaveForm">
+                        <p>Id: <input id="sid" type="number" min="1" class="form-control" /></p>
+                        <p>Firstname: <input id="firstname" class="form-control" /></p>
+                        <p>Lastname: <input id="lastname" class="form-control" /></p>
+                        <p>Email: <input id="email" class="form-control" /></p>
+                        <p>Major: <input id="major" class="form-control" /></p>
+                        <button id="saveStudentBtn" class="btn btn-success">Save</button>
+                    </form>
+                </div>
+                <div style="width: 65%;float:left;">
+                    <h1>Student</h1>
+                    <table class="table table-bordered" id="studentTable">
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="./main.js" type="text/javascript"></script>
+
+</html>
