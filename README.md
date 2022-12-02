@@ -1,5 +1,5 @@
 
-# Lab 1 - RestFUL Web Services
+# Lab 2 - RestFUL Web Services
 
 In this lab, you will create a spring boot application from scratch to implement the following requirements.
 
