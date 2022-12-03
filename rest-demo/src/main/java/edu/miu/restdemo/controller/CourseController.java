@@ -9,6 +9,7 @@ import java.util.List;
 
 @RequestMapping("/courses")
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CourseController {
 
 

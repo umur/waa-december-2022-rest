@@ -24,7 +24,7 @@ function fetchData(url, cols) {
 }
 
 function renderResult(res, cols) {
-    let table = document.getElementById("searchResult")[0];
+    let table = document.getElementsByTagName("table")[0];
     let thead = document.createElement("thead");
     let tbody = document.createElement("tbody");
     let tr = document.createElement("tr");
@@ -36,11 +36,11 @@ function renderResult(res, cols) {
         tr.appendChild(th);
     });
 
-    datas.forEach(data => {
+    res.forEach(data => {
         let tr = document.createElement("tr");
         cols.forEach(col => {
             let td = document.createElement("td");
-            console.log(data[col], data, col);
+            // console.log(data[col], data, col);
             td.textContent = data[col];
             tr.appendChild(td);
         })
