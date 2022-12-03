@@ -12,6 +12,7 @@ import java.util.List;
  */
 
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/courses")
 public class CourseController {

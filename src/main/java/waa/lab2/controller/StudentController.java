@@ -12,6 +12,7 @@ import java.util.List;
  * @author Ankhbayar Azzaya
  */
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/students")
 public class StudentController {
