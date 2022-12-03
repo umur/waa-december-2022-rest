@@ -73,4 +73,10 @@ public class StudentServiceImpl implements StudentService {
     public boolean delete (int id){
         return studentRepo.delete(id);
     }
+
+    @Override
+    public  void update (int id , StudentDto s) {
+        StudentDto dto = new StudentDto();
+        studentRepo.update(id, dto.toEntity(s));
+    }
 }

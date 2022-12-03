@@ -18,4 +18,6 @@ public interface StudentService {
     List<CourseDto> getCoursesByStudentId(int studentId);
 
     boolean delete(int id);
+
+    void update(int id, StudentDto student);
 }

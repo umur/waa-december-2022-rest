@@ -37,4 +37,9 @@ public class CourseRepo{
        return courses.removeIf(p -> p.getId() == id);
     }
 
+    public void update(int id, Course c) {
+        delete(id);
+        save(c);
+    }
+
 }

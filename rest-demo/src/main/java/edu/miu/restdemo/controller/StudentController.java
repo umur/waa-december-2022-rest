@@ -43,9 +43,9 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable int id, @RequestBody StudentDto product){
+    public void update(@PathVariable int id, @RequestBody StudentDto s){
         System.out.println("update is running");
-        //todo update repo and service
+        studentService.update(id, s);
     }
 
     @GetMapping("/searchCourses")

@@ -30,18 +30,22 @@ public class CourseController {
     }
 
     @PostMapping
-    public void create(@RequestBody CourseDto product){
+    public void create(@RequestBody CourseDto courseDto){
         System.out.println("create is running");
+        courseService.save(courseDto);
+
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id){
         System.out.println("delete is running");
+        courseService.delete(id);
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable int id, @RequestBody CourseDto product){
-        System.out.println("update is running");
+    public void update(@PathVariable int id, @RequestBody CourseDto courseDto){
+        System.out.println("delete is running");
+        courseService.update(id,courseDto);
     }
 
 }

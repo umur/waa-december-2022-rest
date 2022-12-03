@@ -43,4 +43,14 @@ public class CourseServiceImpl implements CourseService {
 
     }
 
+    @Override
+    public void update(int id, CourseDto c){
+        CourseDto dto = new CourseDto();
+        courseRepo.update(id, dto.toEntity(c));
+    }
+
+    @Override
+    public void delete(int id){
+        courseRepo.delete(id);
+    }
 }

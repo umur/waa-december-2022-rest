@@ -74,4 +74,9 @@ public class StudentRepo {
                 .getCoursesTaken();
     }
 
+    public void update(int id, Student s) {
+        delete(id);
+        save(s);
+    }
+
 }
