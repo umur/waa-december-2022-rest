@@ -24,7 +24,7 @@ function fetchData(url, cols) {
 }
 
 function renderResult(res, cols) {
-    let table = document.getElementsByTagName("table")[0];
+    let table = document.getElementById("searchResult");
     let thead = document.createElement("thead");
     let tbody = document.createElement("tbody");
     let tr = document.createElement("tr");
