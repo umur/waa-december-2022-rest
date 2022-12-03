@@ -1,39 +1,35 @@
 package edu.miu.restdemo.controller;
 
-import edu.miu.restdemo.dto.ProductDto;
-import edu.miu.restdemo.entity.Product;
-import edu.miu.restdemo.entity.Review;
-import edu.miu.restdemo.service.ProductService;
+import edu.miu.restdemo.dto.CourseDto;
+import edu.miu.restdemo.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/products")
+@RequestMapping("/courses")
 @RestController
-public class ProductController {
+public class CourseController {
 
 
     @Autowired
-    private ProductService productService;
-
+    private CourseService courseService;
 
 
     @GetMapping
-    public List<ProductDto> getAll(){
+    public List<CourseDto> getAll(){
         System.out.println("get all is running");
-        return null;
+        return courseService.getAllCourses();
     }
 
     @GetMapping("/{id}")
-    public ProductDto getById(@PathVariable int id){
+    public CourseDto getById(@PathVariable int id){
         System.out.println("get by id is running");
-        return productService.getById(id);
+        return courseService.getById(id);
     }
 
     @PostMapping
-    public void create(@RequestBody ProductDto product){
+    public void create(@RequestBody CourseDto product){
         System.out.println("create is running");
     }
 
@@ -43,7 +39,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable int id, @RequestBody ProductDto product){
+    public void update(@PathVariable int id, @RequestBody CourseDto product){
         System.out.println("update is running");
     }
 
