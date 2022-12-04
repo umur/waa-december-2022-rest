@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequestMapping("/students")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(maxAge = 3600)
 public class StudentController {
     private final StudentService studentService;
 

@@ -17,8 +17,8 @@ public class CourseRepository
     static {
         courseList.add(new Course(1, "FPP", "C101"));
         courseList.add(new Course(2, "MPP", "C201"));
-        courseList.add(new Course(2, "WAP", "C202"));
-        courseList.add(new Course(2, "WAA", "C301"));
+        courseList.add(new Course(3, "WAP", "C202"));
+        courseList.add(new Course(4, "WAA", "C301"));
     }
 
     public List<Course> getAll(){
