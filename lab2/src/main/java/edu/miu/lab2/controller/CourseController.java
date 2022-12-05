@@ -2,19 +2,17 @@ package edu.miu.lab2.controller;
 
 import edu.miu.lab2.entity.Course;
 import edu.miu.lab2.service.CourseService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/course")
 public class CourseController {
 
     private final CourseService  courseService;
-
-    public CourseController(CourseService courseService) {
-        this.courseService = courseService;
-    }
 
     @GetMapping
     public List<Course> getAll() {
@@ -22,12 +20,12 @@ public class CourseController {
     }
 
     @GetMapping("/{id}")
-    public Course getStudentById(@PathVariable int id) {
+    public Course getCourseById(@PathVariable int id) {
         return courseService.findById(id);
     }
 
-    @GetMapping("/filter")
-    public List<Course> getCoursesByStudentId(int studentId)  {
+    @GetMapping("/filter/student/{studentId}")
+    public List<Course> getCoursesByStudentId(@PathVariable int studentId)  {
         return courseService.getCoursesByStudentId(studentId);
     }
 

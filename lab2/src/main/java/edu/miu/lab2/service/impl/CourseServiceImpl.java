@@ -5,7 +5,6 @@ import edu.miu.lab2.repository.CourseRepo;
 import edu.miu.lab2.repository.StudentRepo;
 import edu.miu.lab2.service.CourseService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
