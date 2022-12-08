@@ -1,7 +1,7 @@
 package com.example.labtwo.controller;
 
-import com.example.labtwo.dto.CourseDto;
-import com.example.labtwo.dto.StudentDto;
+
+import com.example.labtwo.entity.Student;
 import com.example.labtwo.service.StudentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,19 +19,19 @@ public class StudentController {
 
 
     @GetMapping("/{id}")
-    public StudentDto getById(@PathVariable int id){
+    public Student getById(@PathVariable int id){
         System.out.println("Get id: " + String.valueOf(id));
         return studentService.getById(id);
     }
 
     @PostMapping
-    public void create(@RequestBody StudentDto student){
+    public void create(@RequestBody Student student){
         System.out.println("Post request received: " + student.toString());
         studentService.add(student);
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable int id, @RequestBody StudentDto student){
+    public void update(@PathVariable int id, @RequestBody Student student){
         System.out.println("Update request received for id: " + String.valueOf(id) + " with request body: " + student.toString());
         studentService.update(id, student);
     }
@@ -43,13 +43,13 @@ public class StudentController {
     }
 
     @GetMapping("/filterByMajor")
-    public List<StudentDto> getStudentsByMajor(@RequestParam String major){
+    public List<Student> getStudentsByMajor(@RequestParam String major){
         System.out.println("Get Students by major request received.");
         return studentService.getStudentsByMajor(major);
     }
 
     @GetMapping("/{id}/courses")
-    public List<CourseDto> getCoursesByStudentId(@PathVariable int id){
+    public List<Student> getCoursesByStudentId(@PathVariable int id){
         System.out.println("Get courses taken by student id request received.");
         return studentService.getCoursesByStudentId(id);
     }

@@ -1,12 +1,13 @@
 package com.example.labtwo.service;
 
-import com.example.labtwo.dto.CourseDto;
+
 import com.example.labtwo.entity.Course;
-import com.example.labtwo.entity.Student;
+
+import java.util.List;
 
 public interface CourseService {
-    void add(CourseDto course);
-    CourseDto getCourseById(int id);
-    void update(int id, CourseDto course);
+    void add(Course course);
+    List<Course> getCourseById(int id);
+    void update(int id, Course course);
     void delete (int id);
 }

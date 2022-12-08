@@ -25,13 +25,13 @@ public class CourseRepo {
         courses.add(course);
     }
 
-    public List<Course> getCourses(){
+    public List<Course> getCourses(Course courseById){
         return courses.stream()
                 .filter(course -> !course.isDeleted())
                 .toList();
     }
 
-    public void updateCourse( int id, Course course){
+    public void updateCourse(int id, Course course){
         if (course != null){
             Course crs = findById(id);
             if(crs != null){

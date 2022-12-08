@@ -1,11 +1,13 @@
 package com.example.labtwo.service.Impl;
 
-import com.example.labtwo.dto.CourseDto;
+import com.example.labtwo.entity.Course;
 import com.example.labtwo.repository.CourseRepo;
 import com.example.labtwo.repository.StudentRepo;
 import com.example.labtwo.service.CourseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -14,20 +16,23 @@ public class CourseServiceImpl implements CourseService {
     private final StudentRepo sRepo;
 
 
-
     @Override
-    public void add(CourseDto course) {
+    public void add(Course course) {
+
 
     }
 
     @Override
-    public CourseDto getCourseById(int id) {
-
-        return null;
+    public List<Course> getCourseById(int id) {
+        return sRepo.getAll().stream()
+                .filter(item->item.getId() == id)
+                .map(x->x.getCoursesTaken())
+                .findFirst().get();
     }
 
     @Override
-    public void update(int id, CourseDto course) {
+    public void update(int id, Course course) {
+        cRepo.updateCourse(id, course);
 
     }
 

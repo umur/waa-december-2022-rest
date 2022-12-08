@@ -30,6 +30,31 @@ public class StudentRepo {
                 .findFirst().get()
                 .getCoursesTaken();
     }
+    public void add (Student student){
+        students.add(student);
+    }
+    public void update (int id, Student student){
+        if(student != null){
+            Student s = findById(id);
+            if(s != null){
+                students.set(students.indexOf(s), student);
+            }
+        }
+
+    }
+    public void delete(int id){
+        Student student = findById(id);
+        if (student != null){
+            students.remove(students.indexOf(student));
+        }
+    }
+    private Student findById(int id)
+    {
+        return students.stream().filter(x->x.getId()== id).findFirst().get();
+    }
 
 
+    public List<Student> getAll() {
+        return students;
+    }
 }
