@@ -16,8 +16,8 @@ public class CourseRepo {
 
     static {
         courses.add(new Course(1, "WAA", "CS545"));
-        courses.add(new Course(1, "EA", "CS544"));
-        courses.add(new Course(1, "SA", "CS590"));
+        courses.add(new Course(2, "EA", "CS544"));
+        courses.add(new Course(3, "SA", "CS590"));
     }
 
     public boolean addCourse(Course newCourse) {
@@ -47,6 +47,7 @@ public class CourseRepo {
     }
 
     public Course updateCourse(int id, Course newCourse) {
+        // TODO fix the code
         Integer indexOfCourse = courses
                 .stream()
                 .filter(c -> c.getId() == id)
