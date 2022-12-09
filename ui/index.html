@@ -25,14 +25,59 @@
     </nav>
 
 <div class="container">
+    <div id="msg-box" class="hidden alert alert-success">
+        Student saved successfully!
+    </div>
      
     <span id="title"></span>
 
-    <button class="btn btn-success btn-sm">Add</button>
-
-    <!-- <table id="table"></table> -->
+    <button id="add-btn" class="btn btn-success btn-sm">Add</button>
 
     <ul id="list"></ul>
+
+    <form id="student-form" class="hidden form">
+        <div>
+            <label>ID</label>
+            <input id="student-id">
+        </div>
+        <div>
+            <label>First name</label>
+            <input id="student-fname">
+        </div>
+        <div>
+            <label>Last name</label>
+            <input id="student-lname">
+        </div>
+        <div>
+            <label>email</label>
+            <input id="student-email">
+        </div>
+        <div>
+            <label>major</label>
+            <select id="student-major">
+                <option>ComPro</option>
+                <option>MSD</option>
+                <option>MBA</option>
+            </select>
+        </div>
+        <input id="save-student" type="submit" value="Save" class="btn btn-primary">
+    </form>
+
+    <form id="course-form" class="hidden form">
+        <div>
+            <label>ID</label>
+            <input id="course-id">
+        </div>
+        <div>
+            <label>Course name</label>
+            <input id="course-name">
+        </div>
+        <div>
+            <label>Course code</label>
+            <input id="course-code">
+        </div>
+        <input id="save-course" type="submit" value="Save" class="btn btn-primary">
+    </form>
     
 </div>
 

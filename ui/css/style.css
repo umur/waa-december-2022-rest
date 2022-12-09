@@ -6,7 +6,6 @@ a {
     cursor: pointer;
 }
 
-
 #title {
     font-size: 22px;
 }
@@ -18,9 +17,10 @@ a {
     border-radius: 0;
 }
 
-.navbar-nav {
+/* .navbar-nav {
     flex-direction: row;
 }
+ */
 
 .nav-active {
     background-color: #eee;
@@ -41,6 +41,34 @@ a {
     margin: 10px 0;
 }
 
+#list > li {
+    list-style: circle;
+}
+
+#list > li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .padded {
     margin-left: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 10px 0;
+}
+
+.form label {
+    min-width: 100px;
+}
+
+.form input, .form select {
+    width: 180px;
+}
+
+input[type="submit"]{
+    width: 80px;
 }
