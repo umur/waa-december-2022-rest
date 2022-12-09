@@ -17,8 +17,6 @@ public class Student {
 
     private String major;
 
-    private double gpa;
-
     private List<Course> courses;
 
 }

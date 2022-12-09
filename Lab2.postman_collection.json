@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Abhay\",\n    \"lastName\": \"Rawal\",\n    \"email\": \"abhay.rawal@miu.edu\",\n    \"major\": \"Computer Science\",\n    \"gpa\": 4.0\n}",
+							"raw": "{\n    \"firstName\": \"Abhay\",\n    \"lastName\": \"Rawal\",\n    \"email\": \"abhay.rawal@miu.edu\",\n    \"major\": \"MSD\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,7 +64,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"firstName\": \"Diptesh\",\n    \"lastName\": \"Shrestha\",\n    \"email\": \"diptesh.shrestha@miu.edu\",\n    \"major\": \"Computer Science\",\n    \"gpa\": 3.2\n}",
+							"raw": "{\n    \"firstName\": \"Diptesh\",\n    \"lastName\": \"Shrestha\",\n    \"email\": \"diptesh.shrestha@miu.edu\",\n    \"major\": \"MSCS\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -92,7 +92,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Abhay\",\n    \"lastName\": \"Rawal\",\n    \"email\": \"abhay.rawal@miu.edu\",\n    \"major\": \"MSD\",\n    \"gpa\": 4.0,\n    \"courses\": [\n        {\n            \"id\": 1,\n            \"name\": \"FPP\",\n            \"code\": \"CS390\"\n        }\n    ]\n}",
+							"raw": "{\n    \"firstName\": \"Abhay\",\n    \"lastName\": \"Rawal\",\n    \"email\": \"abhay.rawal@miu.edu\",\n    \"major\": \"MSD\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -140,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"firstName\": \"Diptesh\",\n    \"lastName\": \"Shrestha\",\n    \"email\": \"diptesh.shrestha@miu.edu\",\n    \"major\": \"MSCS\",\n    \"gpa\": 3.9,\n    \"courses\": [\n        {\n            \"id\": 1,\n            \"name\": \"FPP\",\n            \"code\": \"CS390\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"MPP\",\n            \"code\": \"CS401\"\n        }\n    ]\n}",
+							"raw": "{\n    \"id\": 2,\n    \"firstName\": \"Diptesh\",\n    \"lastName\": \"Shrestha\",\n    \"email\": \"diptesh.shrestha@miu.edu\",\n    \"major\": \"MSCS\",\n    \"courses\": [\n        {\n            \"id\": 1,\n            \"name\": \"FPP\",\n            \"code\": \"CS390\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"MPP\",\n            \"code\": \"CS401\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -391,7 +391,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/course/filter/student/1",
+							"raw": "http://localhost:8081/course/filter/student/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -401,7 +401,7 @@
 								"course",
 								"filter",
 								"student",
-								"1"
+								"2"
 							]
 						}
 					},

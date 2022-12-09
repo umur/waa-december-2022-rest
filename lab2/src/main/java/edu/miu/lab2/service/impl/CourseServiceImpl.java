@@ -38,6 +38,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public boolean add(Course c) {
+        c.setId(courseRepo.getMaxId() + 1);
         return courseRepo.add(c);
     }
 

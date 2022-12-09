@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequiredArgsConstructor
 @RestController
 @RequestMapping("/course")
+@RequiredArgsConstructor
+@CrossOrigin
 public class CourseController {
 
     private final CourseService  courseService;

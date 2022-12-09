@@ -1,9 +1,11 @@
 package edu.miu.lab2.repository;
 
 import edu.miu.lab2.entity.Course;
+import edu.miu.lab2.entity.Student;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -15,6 +17,12 @@ public class CourseRepo {
                 .filter(student -> student.getId() == id)
                 .findFirst()
                 .get();
+    }
+    public int getMaxId() {
+        return courses.stream()
+                .map(Course::getId)
+                .max(Comparator.naturalOrder())
+                .orElse(0);
     }
 
     public List<Course> getAll() {

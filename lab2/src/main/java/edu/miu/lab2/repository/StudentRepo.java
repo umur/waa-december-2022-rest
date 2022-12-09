@@ -4,6 +4,7 @@ import edu.miu.lab2.entity.Student;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -15,6 +16,12 @@ public class StudentRepo {
                 .filter(student -> student.getId() == id)
                 .findFirst()
                 .get();
+    }
+    public int getMaxId() {
+        return students.stream()
+                .map(Student::getId)
+                .max(Comparator.naturalOrder())
+                .orElse(1000);
     }
 
     public List<Student> getAll() {

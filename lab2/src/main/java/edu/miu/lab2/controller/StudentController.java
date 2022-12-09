@@ -2,19 +2,18 @@ package edu.miu.lab2.controller;
 
 import edu.miu.lab2.entity.Student;
 import edu.miu.lab2.service.StudentService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/student")
+@RequiredArgsConstructor
+@CrossOrigin
 public class StudentController {
 
     private final StudentService studentService;
-
-    public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-    }
 
     @GetMapping
     public List<Student> getAll() {

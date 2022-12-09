@@ -34,6 +34,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public boolean add(Student s) {
+        s.setId(studentRepo.getMaxId() + 1);
         return studentRepo.add(s);
     }
 
