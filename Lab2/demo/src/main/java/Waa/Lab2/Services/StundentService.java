@@ -6,7 +6,7 @@ import Waa.Lab2.Entity.Student;
 import java.util.List;
 
 public interface StundentService {
-    public Student getStudentsByMajor(String major);
+    public List <Student> getStudentsByMajor(String major);
     public List<Course> getCoursesByStudentId(int id);
 
 }

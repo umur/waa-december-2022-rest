@@ -18,8 +18,8 @@ public class StudentImpl implements StundentService {
    @Autowired
     public static StudentRepo repo;
 
-    public  Student getStudentsByMajor(String major) {
-        return getAllStudents().stream().
+    public  List<Student> getStudentsByMajor(String major) {
+        return (List<Student>) getAllStudents().stream().
 
                 filter(x->x.getMajor()==major).
                 findFirst().get();

@@ -1,27 +1,27 @@
 package Waa.Lab2.Controller;
 
+import Waa.Lab2.Entity.Course;
 import Waa.Lab2.Entity.Student;
 import Waa.Lab2.Services.Serviceimpl.StudentImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/students")
 public class StudentsController {
 
-
+    @Autowired
     StudentImpl studentService;
 
-    @Autowired
-    StudentsController(StudentImpl studentServiceImpl)
-    {
-        this.studentService = studentServiceImpl;
-    }
-
-
     @GetMapping("/getStudentsByMajor")
-    public Student getStudentsByMajor(@RequestParam String major) {
+    public List<Student> getStudentsByMajor(@RequestParam String major) {
         return  studentService.getStudentsByMajor("Wap");
+    }
+    @GetMapping("/{id}/courses")
+    public List<Course> getCourseById(@RequestParam int identity) {
+        return  studentService.getCoursesByStudentId(identity);
     }
 
     @PostMapping

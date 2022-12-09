@@ -2,6 +2,7 @@ package Waa.Lab2.Repository;
 
 import Waa.Lab2.Entity.Course;
 import Waa.Lab2.Entity.Student;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
+
 public class StudentRepo {
     public static  Student s1;
     public static  Student s2;
