@@ -46,8 +46,8 @@ a {
 }
 
 #list > li:hover {
-    font-weight: bold;
     cursor: pointer;
+    color: #777;
 }
 
 .padded {
