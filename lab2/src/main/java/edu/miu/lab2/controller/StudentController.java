@@ -37,7 +37,7 @@ public class StudentController {
 
     @PutMapping("/{id}")
     public void updateStudemt (@PathVariable int id, @RequestBody Student student){
-        studentService.deleteStudent(id);
+        studentService.updateStudent(id,student);
     }
 
     @GetMapping("/filterByMajor")
