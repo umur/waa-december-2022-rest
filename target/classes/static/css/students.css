@@ -1,0 +1,23 @@
+body{
+    background:#000;
+    color:#fff;
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.button {
+    margin: 20px;
+    color:blue;
+    color:#fff;
+}
+.student {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.studentDetail {
+    text-align: center;
+    border: 1px solid #fff;
+}
